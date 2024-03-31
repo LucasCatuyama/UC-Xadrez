@@ -1,0 +1,54 @@
+:root {
+    --dark: #B58863;
+    --light: #F0D9B5;
+    --bg-black: #161512;
+    --select-green: #829769;
+    --seleclt-yellow: #CDD26A;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 40px;
+    height: auto;
+}
+
+.tabuleiro {
+    display: flex;
+    width: 400px;
+    height: 400px;
+}
+
+.tabuleiro__linha__quadrado {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabuleiro__linhaImpar .tabuleiro__linha__quadrado:nth-child(odd),
+.tabuleiro__linhaPar .tabuleiro__linha__quadrado:nth-child(even) {
+    background-color: var(--light);
+}
+
+
+.tabuleiro__linhaImpar .tabuleiro__linha__quadrado:nth-child(even),
+.tabuleiro__linhaPar .tabuleiro__linha__quadrado:nth-child(odd) {
+    background-color: var(--dark);
+}
+
+#acaoPossivel {
+    background-color: var(--select-green);
+}
+
+#selecionado {
+    background-color: var(--seleclt-yellow);
+}
