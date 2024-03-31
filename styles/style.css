@@ -45,10 +45,12 @@ img {
     background-color: var(--dark);
 }
 
-#acaoPossivel {
+#green {
     background-color: var(--select-green);
 }
 
-#selecionado {
+#yellow {
     background-color: var(--seleclt-yellow);
 }
+
+

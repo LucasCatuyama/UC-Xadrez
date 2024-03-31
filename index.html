@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Xadrez</title>
+    <title>lichess.org</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
@@ -20,11 +21,15 @@
         <div class="tabuleiro__linha__quadrado"></div>
         <div class="tabuleiro__linha__quadrado"></div>
         <div class="tabuleiro__linha__quadrado"></div>
-        <div class="tabuleiro__linha__quadrado"><img src="./assets/light/pawn-light.png"></div>
-        <div class="tabuleiro__linha__quadrado"><img src="./assets/light/rook-light.png"></div>
+        <div class="tabuleiro__linha__quadrado">
+          <img src="./assets/light/pawn-light.png" />
+        </div>
+        <div class="tabuleiro__linha__quadrado">
+          <img src="./assets/light/rook-light.png" />
+        </div>
       </div>
       <div class="tabuleiro__linhaPar">
-        <div class="tabuleiro__linha__quadrado" id="acaoPossivel"></div>
+        <div class="tabuleiro__linha__quadrado" id="green"></div>
         <div class="tabuleiro__linha__quadrado">
           <img src="./assets/dark/pawn-dark.png" />
         </div>
@@ -32,27 +37,39 @@
         <div class="tabuleiro__linha__quadrado"></div>
         <div class="tabuleiro__linha__quadrado"></div>
         <div class="tabuleiro__linha__quadrado"></div>
-        <div class="tabuleiro__linha__quadrado"><img src="./assets/light/pawn-light.png"></div>
-        <div class="tabuleiro__linha__quadrado"><img src="./assets/light/chess-light.png"></div>
+        <div class="tabuleiro__linha__quadrado">
+          <img src="./assets/light/pawn-light.png" />
+        </div>
+        <div class="tabuleiro__linha__quadrado">
+          <img src="./assets/light/chess-light.png" />
+        </div>
       </div>
       <div class="tabuleiro__linhaImpar">
         <div class="tabuleiro__linha__quadrado">
           <img src="./assets/dark/bishop-dark.png" />
         </div>
         <div class="tabuleiro__linha__quadrado"></div>
-        <div class="tabuleiro__linha__quadrado" id="selecionado">
+        <div class="tabuleiro__linha__quadrado" id="yellow">
           <img src="./assets/dark/chess-dark.png" />
         </div>
         <div class="tabuleiro__linha__quadrado">
           <img src="./assets/dark/pawn-dark.png" />
         </div>
-        <div class="tabuleiro__linha__quadrado"><img src="./assets/light/bishop-light.png" alt=""></div>
+        <div class="tabuleiro__linha__quadrado">
+          <img src="./assets/light/bishop-light.png" alt="" />
+        </div>
         <div class="tabuleiro__linha__quadrado"></div>
-        <div class="tabuleiro__linha__quadrado"><img src="./assets/light/pawn-light.png"></div>
-        <div class="tabuleiro__linha__quadrado"><img src="./assets/light/bishop-light.png" alt=""></div>
+        <div class="tabuleiro__linha__quadrado">
+          <img src="./assets/light/pawn-light.png" />
+        </div>
+        <div class="tabuleiro__linha__quadrado">
+          <img src="./assets/light/bishop-light.png" alt="" />
+        </div>
       </div>
       <div class="tabuleiro__linhaPar">
-        <div class="tabuleiro__linha__quadrado"><img src="./assets/dark/queen-dark.png"></div>
+        <div class="tabuleiro__linha__quadrado">
+          <img src="./assets/dark/queen-dark.png" />
+        </div>
         <div class="tabuleiro__linha__quadrado">
           <img src="./assets/dark/pawn-dark.png" />
         </div>
@@ -60,35 +77,53 @@
         <div class="tabuleiro__linha__quadrado"></div>
         <div class="tabuleiro__linha__quadrado"></div>
         <div class="tabuleiro__linha__quadrado"></div>
-        <div class="tabuleiro__linha__quadrado"><img src="./assets/light/pawn-light.png"></div>
-        <div class="tabuleiro__linha__quadrado"><img src="./assets/light/queen-light.png"></div>
+        <div class="tabuleiro__linha__quadrado">
+          <img src="./assets/light/pawn-light.png" />
+        </div>
+        <div class="tabuleiro__linha__quadrado">
+          <img src="./assets/light/queen-light.png" />
+        </div>
       </div>
       <div class="tabuleiro__linhaImpar">
-        <div class="tabuleiro__linha__quadrado"><img src="./assets/dark/king-dark.png"></div>
+        <div class="tabuleiro__linha__quadrado">
+          <img src="./assets/dark/king-dark.png" />
+        </div>
         <div class="tabuleiro__linha__quadrado">
           <img src="./assets/dark/pawn-dark.png" />
         </div>
         <div class="tabuleiro__linha__quadrado"></div>
         <div class="tabuleiro__linha__quadrado"></div>
-        <div class="tabuleiro__linha__quadrado"><img src="./assets/light/pawn-light.png"></div>
+        <div class="tabuleiro__linha__quadrado after" id="after">
+
+        </div>
         <div class="tabuleiro__linha__quadrado"></div>
-        <div class="tabuleiro__linha__quadrado"></div>
-        <div class="tabuleiro__linha__quadrado"><img src="./assets/light/king-light.png"></div>
+        <div class="tabuleiro__linha__quadrado" id="before"><img draggable="true" src="./assets/light/pawn-light.png"></div>
+        <div class="tabuleiro__linha__quadrado">
+          <img src="./assets/light/king-light.png" />
+        </div>
       </div>
       <div class="tabuleiro__linhaPar">
-        <div class="tabuleiro__linha__quadrado"><img src="./assets/dark/bishop-dark.png"></div>
+        <div class="tabuleiro__linha__quadrado">
+          <img src="./assets/dark/bishop-dark.png" />
+        </div>
         <div class="tabuleiro__linha__quadrado">
           <img src="./assets/dark/pawn-dark.png" />
         </div>
         <div class="tabuleiro__linha__quadrado"></div>
         <div class="tabuleiro__linha__quadrado"></div>
         <div class="tabuleiro__linha__quadrado"></div>
-        <div class="tabuleiro__linha__quadrado"><img src="./assets/light/chess-light.png"></div>
-        <div class="tabuleiro__linha__quadrado"><img src="./assets/light/pawn-light.png"></div>
+        <div class="tabuleiro__linha__quadrado">
+          <img src="./assets/light/chess-light.png" />
+        </div>
+        <div class="tabuleiro__linha__quadrado">
+          <img src="./assets/light/pawn-light.png" />
+        </div>
         <div class="tabuleiro__linha__quadrado"></div>
       </div>
       <div class="tabuleiro__linhaImpar">
-        <div class="tabuleiro__linha__quadrado"><img src="./assets/dark/chess-dark.png"></div>
+        <div class="tabuleiro__linha__quadrado">
+          <img src="./assets/dark/chess-dark.png" />
+        </div>
         <div class="tabuleiro__linha__quadrado"></div>
         <div class="tabuleiro__linha__quadrado">
           <img src="./assets/dark/pawn-dark.png" />
@@ -96,11 +131,15 @@
         <div class="tabuleiro__linha__quadrado"></div>
         <div class="tabuleiro__linha__quadrado"></div>
         <div class="tabuleiro__linha__quadrado"></div>
-        <div class="tabuleiro__linha__quadrado"><img src="./assets/light/pawn-light.png"></div>
+        <div class="tabuleiro__linha__quadrado">
+          <img src="./assets/light/pawn-light.png" />
+        </div>
         <div class="tabuleiro__linha__quadrado"></div>
       </div>
       <div class="tabuleiro__linhaPar">
-        <div class="tabuleiro__linha__quadrado"><img src="./assets/dark/rook-dark.png"></div>
+        <div class="tabuleiro__linha__quadrado">
+          <img src="./assets/dark/rook-dark.png" />
+        </div>
         <div class="tabuleiro__linha__quadrado">
           <img src="./assets/dark/pawn-dark.png" />
         </div>
@@ -108,8 +147,12 @@
         <div class="tabuleiro__linha__quadrado"></div>
         <div class="tabuleiro__linha__quadrado"></div>
         <div class="tabuleiro__linha__quadrado"></div>
-        <div class="tabuleiro__linha__quadrado"><img src="./assets/light/pawn-light.png"></div>
-        <div class="tabuleiro__linha__quadrado"><img src="./assets/light/rook-light.png"></div>
+        <div class="tabuleiro__linha__quadrado">
+          <img src="./assets/light/pawn-light.png" />
+        </div>
+        <div class="tabuleiro__linha__quadrado">
+          <img src="./assets/light/rook-light.png" />
+        </div>
       </div>
     </section>
 
